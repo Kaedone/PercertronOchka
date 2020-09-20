@@ -1,0 +1,2 @@
+# PercertronOchka
+Model of perceptron
