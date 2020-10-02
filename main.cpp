@@ -12,16 +12,22 @@ int main()
 	int f = 0;
 	for (double i = 0; i < 251; i++) {
 		for (double j = 0; j < 251; j++) {
-			x = i + j;
-			cout << p[i].process({ i, j }) << endl;
-			p[i].changeWeights(x);
-			if (p[i].process({ i, j }) == x) {
-				t++;
-			}
-			else {
-				f++;
-			}
 
+			x = i + j;
+
+
+			for (int k = 0; k < p.size(); ++k)
+			{
+				
+				cout << p[i].process({ i, j }) << endl;
+				p[i].changeWeights(x);
+				if (p[i].process({ i, j }) == x) {
+					t++;
+				}
+				else {
+					f++;
+				}
+			}
 		}
 	}
 
